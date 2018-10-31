@@ -2,5 +2,12 @@
     "name": "Kancolle Wiki Viewer",
     "version": "1.0",
     "description": "Type short commands into the address bar and you'll go to various wiki pages",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+      "omnibox": {
+          "keyword": "kcw"
+      },
     "manifest_version": 2
   }
