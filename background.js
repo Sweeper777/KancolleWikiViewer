@@ -1,4 +1,4 @@
-var questRegex = /^\s*([abcd]\d+)\s*$/i
+var questRegex = /^\s*([a-z]{1,2}\d+)\s*$/i
 
 function input(text) {
     if (match = questRegex.exec(text)) {
