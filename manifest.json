@@ -1,0 +1,6 @@
+  {
+    "name": "Kancolle Wiki Viewer",
+    "version": "1.0",
+    "description": "Type short commands into the address bar and you'll go to various wiki pages",
+    "manifest_version": 2
+  }
