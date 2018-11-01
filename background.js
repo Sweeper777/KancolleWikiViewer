@@ -28,4 +28,11 @@ function quest(questID) {
     chrome.tabs.update({url: url})
 }
 
+function world(worldInfo) {
+    var url = "https://kancolle.wikia.com/wiki/World_" + worldInfo.worldNumber
+    if (worldInfo.mapNumber != null) {
+        url += "/" + worldInfo.worldNumber + "-" + worldInfo.mapNumber
+    chrome.tabs.update({url: url})
+}
+
 chrome.omnibox.onInputEntered.addListener(input)
