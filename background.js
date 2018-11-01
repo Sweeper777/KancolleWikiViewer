@@ -32,6 +32,9 @@ function world(worldInfo) {
     var url = "https://kancolle.wikia.com/wiki/World_" + worldInfo.worldNumber
     if (worldInfo.mapNumber != null) {
         url += "/" + worldInfo.worldNumber + "-" + worldInfo.mapNumber
+        if (worldInfo.options[0] == "ep") {
+            url += "/Enemy_patterns"
+    }
     chrome.tabs.update({url: url})
 }
 
