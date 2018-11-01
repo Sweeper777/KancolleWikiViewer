@@ -10,6 +10,7 @@ function extractOptions(optionString) {
 }
 
 var questRegex = /^\s*([a-z]{1,2}\d+)\s*$/i
+var worldRegex = /^\s*(\d+)-(\d+)\s*(.*)$/
 
 function input(text) {
     if (match = questRegex.exec(text)) {
