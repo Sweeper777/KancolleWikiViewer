@@ -14,6 +14,12 @@ function input(text) {
     var worldRegex = /^\s*(\d+)(?:-(\d+)\s*(.*))?$/
     if (match = questRegex.exec(text)) {
         quest(match[1])
+    } else if (match = worldRegex.exec(text)) {
+        world({
+            worldNumber: match[1],
+            mapNumber: match[2],
+            options: extractOptions(match[3])
+        })
     }
 }
 
