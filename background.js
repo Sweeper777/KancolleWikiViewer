@@ -3,7 +3,7 @@ function extractOptions(optionString) {
     var options = []
     var match = null
     while (match = optionsRegex.exec(optionString)) {
-        options.push(match[1])
+        options.push(match[1].toLowerCase())
     }
 
     return options
