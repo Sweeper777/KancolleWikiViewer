@@ -34,6 +34,10 @@ function world(worldInfo) {
         url += "/" + worldInfo.worldNumber + "-" + worldInfo.mapNumber
         if (worldInfo.options[0] == "ep") {
             url += "/Enemy_patterns"
+            if (worldInfo.options[1] != undefined) {
+                url += "#" + worldInfo.worldNumber + "-" + worldInfo.mapNumber + "_" + worldInfo.options[1].toUpperCase()
+            }
+        }
     }
     chrome.tabs.update({url: url})
 }
