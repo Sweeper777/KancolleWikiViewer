@@ -24,7 +24,12 @@ function input(text) {
 }
 
 function quest(questID) {
-    var url = "https://kancolle.wikia.com/wiki/Quests#" + questID.toUpperCase();
+    if (/^B[A-Z]/i.test(questID)) {
+        questID = questID.charAt(0).toUpperCase() + questID.charAt(1).toLowerCase() + questID.slice(2)
+    } else {
+        questID = questID.toUpperCase()
+    }
+    var url = "https://kancolle.wikia.com/wiki/Quests#" + questID
     chrome.tabs.update({url: url})
 }
 
