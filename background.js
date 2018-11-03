@@ -12,6 +12,7 @@ function extractOptions(optionString) {
 function input(text) {
     var questRegex = /^\s*([a-z]{1,2}\d+)\s*$/i
     var worldRegex = /^\s*(\d+)(?:-(\d+)\s*(.*))?$/
+    var shipRegex = /^\s*s:([^-]+)\s*(.*)$/i
     if (match = questRegex.exec(text)) {
         quest(match[1])
     } else if (match = worldRegex.exec(text)) {
@@ -19,6 +20,11 @@ function input(text) {
             worldNumber: match[1],
             mapNumber: match[2],
             options: extractOptions(match[3])
+        })
+    } else if (match = shipRegex.exec(text)) {
+        ship({
+            shipName: match[1],
+            options: extractOptions(match[2])
         })
     }
 }
