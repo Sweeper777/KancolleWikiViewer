@@ -59,4 +59,15 @@ function toTitleCase(str) {
 function addUnderscores(string) {
     return string.replace(" ", "_")
 }
+
+function ship(shipInfo) {
+    var url = "https://kancolle.wikia.com/wiki/" + addUnderscores(toTitleCase(shipInfo.shipName))
+    if (shipInfo.options[0] == "q") {
+        url += "#Quotes"
+    } else if (shipInfo.options[0] == "g") {
+        url += "/Gallery"
+    }
+    chrome.tabs.update({url: url})
+}
+
 chrome.omnibox.onInputEntered.addListener(input)
