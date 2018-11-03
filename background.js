@@ -47,4 +47,16 @@ function world(worldInfo) {
     chrome.tabs.update({url: url})
 }
 
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}
+
+function addUnderscores(string) {
+    return string.replace(" ", "_")
+}
 chrome.omnibox.onInputEntered.addListener(input)
