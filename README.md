@@ -24,3 +24,17 @@ Examples:
 - `kcw 1-1` takes you to https://kancolle.wikia.com/wiki/World_1/1-1
 - `kcw 1-1 -ep` takes you to https://kancolle.wikia.com/wiki/World_1/1-1/Enemy_patterns
 - `kcw 1-1 -ep -a` takes you to https://kancolle.wikia.com/wiki/World_1/1-1/Enemy_patterns#1-1_A
+
+## Viewing ships
+
+    kcw s:<ship name> [-q|-g]
+
+Goes to the wiki page for the specified ship. The `-q` option can be specified to jump to the quotes section of the page. The `-g` option can be used to go the `/Gallery` subpage.
+
+The ship name is generally case-insensitive, but it is not guarenteed to work every time. Ship names with a `-` such as `I-168` are not supported as of now.
+
+Examples:
+
+- `kcw s:Asashio` takes you to https://kancolle.wikia.com/wiki/Asashio
+- `kcw s:Asashio -q` takes you to https://kancolle.wikia.com/wiki/Asashio#Quotes
+- `kcw s:Asashio -g` takes you to https://kancolle.wikia.com/wiki/Asashio/Gallery
