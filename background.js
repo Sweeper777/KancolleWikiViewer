@@ -12,7 +12,7 @@ function extractOptions(optionString) {
 function input(text) {
     var questRegex = /^\s*([a-z]{1,2}\d+)\s*$/i
     var worldRegex = /^\s*(\d+)(?:-(\d+)\s*(.*))?$/
-    var shipRegex = /^\s*s:([^-]+)\s*(.*)$/i
+    var shipRegex = /^\s*s:(.+?)(?:\s+(-.*))?$/i
     if (match = questRegex.exec(text)) {
         quest(match[1])
     } else if (match = worldRegex.exec(text)) {
