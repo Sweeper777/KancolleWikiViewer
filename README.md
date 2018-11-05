@@ -31,7 +31,7 @@ Examples:
 
 Goes to the wiki page for the specified ship. The `-q` option can be specified to jump to the quotes section of the page. The `-g` option can be used to go the `/Gallery` subpage.
 
-The ship name is generally case-insensitive, but it is not guarenteed to work every time. Ship names with a `-` such as `I-168` are not supported as of now.
+The ship name is generally case-insensitive, but it is not guarenteed to work every time.
 
 Examples:
 
