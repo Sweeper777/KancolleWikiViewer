@@ -9,5 +9,8 @@
       "omnibox": {
           "keyword": "kcw"
       },
-    "manifest_version": 2
+    "manifest_version": 2,
+    "permissions": [
+      "https://raw.githubusercontent.com/"
+    ]
   }
