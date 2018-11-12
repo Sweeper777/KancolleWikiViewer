@@ -77,6 +77,12 @@ function ship(shipInfo) {
 }
 
 chrome.omnibox.onInputEntered.addListener(input)var xhrShips = new XMLHttpRequest()
+var shipNames = []
 xhrShips.onreadystatechange = handleShipsFetchCompleted
 xhrShips.open("GET", "https://raw.githubusercontent.com/KC3Kai/kc3-translations/master/data/en/ships.json", true)
 xhrShips.send()
+
+function handleShipsFetchCompleted() {
+    shipNames = Object.values(JSON.parse(xhrShips.responseText))
+}
+
