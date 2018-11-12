@@ -76,4 +76,7 @@ function ship(shipInfo) {
     chrome.tabs.update({url: url})
 }
 
-chrome.omnibox.onInputEntered.addListener(input)
+chrome.omnibox.onInputEntered.addListener(input)var xhrShips = new XMLHttpRequest()
+xhrShips.onreadystatechange = handleShipsFetchCompleted
+xhrShips.open("GET", "https://raw.githubusercontent.com/KC3Kai/kc3-translations/master/data/en/ships.json", true)
+xhrShips.send()
