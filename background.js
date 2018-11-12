@@ -32,7 +32,7 @@ function input(text) {
 function showSuggestions(text, suggest) {
     if (text.match(/^s:/)) {
         let partialName = text.substr(2)
-        var suggestions = shipNames.filter(x => x.match(partialName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'))).slice(0, 5)
+        var suggestions = shipNames.filter(x => x.match(new RegExp(partialName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), "i"))).slice(0, 5)
         suggest(suggestions.map(x => ({content: "s:" + x, description: x})))
     }
 }
