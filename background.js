@@ -29,6 +29,14 @@ function input(text) {
     }
 }
 
+function showSuggestions(text, suggest) {
+    if (text.match(/^s:/)) {
+        let partialName = text.substr(2)
+        var suggestions = shipNames.filter(x => x.match(partialName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'))).slice(0, 5)
+        suggest(suggestions.map(x => ({content: "s:" + x, description: x})))
+    }
+}
+
 function quest(questID) {
     if (/^B[A-Z]/i.test(questID)) {
         questID = questID.charAt(0).toUpperCase() + questID.charAt(1).toLowerCase() + questID.slice(2)
@@ -76,8 +84,10 @@ function ship(shipInfo) {
     chrome.tabs.update({url: url})
 }
 
-chrome.omnibox.onInputEntered.addListener(input)var xhrShips = new XMLHttpRequest()
 var shipNames = []
+
+chrome.omnibox.onInputEntered.addListener(input)
+chrome.omnibox.onInputChanged.addListener(showSuggestions)
 xhrShips.onreadystatechange = handleShipsFetchCompleted
 xhrShips.open("GET", "https://raw.githubusercontent.com/KC3Kai/kc3-translations/master/data/en/ships.json", true)
 xhrShips.send()
