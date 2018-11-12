@@ -88,6 +88,8 @@ var shipNames = []
 
 chrome.omnibox.onInputEntered.addListener(input)
 chrome.omnibox.onInputChanged.addListener(showSuggestions)
+
+var xhrShips = new XMLHttpRequest()
 xhrShips.onreadystatechange = handleShipsFetchCompleted
 xhrShips.open("GET", "https://raw.githubusercontent.com/KC3Kai/kc3-translations/master/data/en/ships.json", true)
 xhrShips.send()
@@ -96,3 +98,7 @@ function handleShipsFetchCompleted() {
     shipNames = Object.values(JSON.parse(xhrShips.responseText))
 }
 
+var xhrEquips = new XMLHttpRequest()
+xhrEquips.onreadystatechange = handleEquipsFetchCompleted
+xhrEquips.open("GET", "https://raw.githubusercontent.com/KC3Kai/kc3-translations/master/data/en/items.json", true)
+xhrEquips.send()
