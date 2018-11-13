@@ -34,6 +34,8 @@ Goes to the wiki page for the specified ship. The `-q` option can be specified t
 
 The ship name is generally case-insensitive, but it is not guarenteed to work every time.
 
+After typing `s:`, autocomplete suggestions will pop up, so you don't have to type the full name.
+
 Examples:
 
 - `kcw s:Asashio` takes you to https://kancolle.wikia.com/wiki/Asashio
