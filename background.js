@@ -61,6 +61,8 @@ function world(worldInfo) {
             if (worldInfo.options[1] != undefined) {
                 url += "#" + worldInfo.worldNumber + "-" + worldInfo.mapNumber + "_" + worldInfo.options[1].toUpperCase()
             }
+        } else if (worldInfo.options[0] == "dl") {
+            url += "/Drop_list"
         }
     }
     chrome.tabs.update({url: url})
