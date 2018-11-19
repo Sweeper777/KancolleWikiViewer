@@ -41,3 +41,13 @@ Examples:
 - `kcw s:Asashio` takes you to https://kancolle.wikia.com/wiki/Asashio
 - `kcw s:Asashio -q` takes you to https://kancolle.wikia.com/wiki/Asashio#Quotes
 - `kcw s:Asashio -g` takes you to https://kancolle.wikia.com/wiki/Asashio/Gallery
+
+## Viewing equipments
+
+    kcw e:<equipment name>
+
+Goes to the wiki page for the specified equipment.
+
+The equipment name is generally case-insensitive, but it is not guarenteed to work every time.
+
+After typing `e:`, autocomplete suggestions will pop up, so you don't have to type the full name.
