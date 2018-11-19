@@ -27,6 +27,8 @@ function input(text) {
             shipName: match[1],
             options: extractOptions(match[2])
         })
+    } else if (match = equipmentRegex.exec(text)) {
+        equipment(match[1])
     }
 }
 
