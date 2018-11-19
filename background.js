@@ -91,6 +91,11 @@ function ship(shipInfo) {
     chrome.tabs.update({url: url})
 }
 
+function equipment(equipmentName) {
+    var url = "https://kancolle.wikia.com/wiki/" + addUnderscores(toTitleCase(equipmentName))
+    chrome.tabs.update({url: url})
+}
+
 var shipNames = []
 var equipmentNames = []
 
