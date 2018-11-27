@@ -11,3 +11,10 @@ function saveOptions() {
     })
   }
   
+  function restoreOptions() {
+    chrome.storage.sync.get({
+      wiki: "1"
+    }, function(items) {
+      document.getElementById('wikiSelector').value = items.wiki
+    })
+  }
