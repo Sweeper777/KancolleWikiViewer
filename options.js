@@ -18,3 +18,5 @@ function saveOptions() {
       document.getElementById('wikiSelector').value = items.wiki
     })
   }
+  document.addEventListener('DOMContentLoaded', restoreOptions)
+  document.getElementById('save').addEventListener('click', saveOptions)
