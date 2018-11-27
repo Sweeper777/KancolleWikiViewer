@@ -17,5 +17,9 @@
     "icons": {
       "128": "kcw-icon-128.png",
       "48": "kcw-icon-48.png"
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": false
     }
   }
