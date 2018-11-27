@@ -1,3 +1,9 @@
+function getPreferredWiki(completion) {
+    chrome.storage.sync.get({
+        wiki: "1"
+      }, completion)
+}
+
 function extractOptions(optionString) {
     var optionsRegex = /-([a-z]+)/gi
     var options = []
