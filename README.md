@@ -51,3 +51,7 @@ Goes to the wiki page for the specified equipment.
 The equipment name is generally case-insensitive, but it is not guarenteed to work every time.
 
 After typing `e:`, autocomplete suggestions will pop up, so you don't have to type the full name.
+
+## Linking to different wikis (WIP)
+
+If you prefer the EN kancollewiki to the Wikia, you can change which wiki to link to in the options, which you can open by clicking on the extension's icon, then click "options"
