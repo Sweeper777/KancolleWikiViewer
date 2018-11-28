@@ -70,6 +70,9 @@ function quest(questID) {
 }
 
 function world(worldInfo) {
+}
+
+function wikiaWorld(worldInfo) {
     var url = "https://kancolle.wikia.com/wiki/World_" + worldInfo.worldNumber
     if (worldInfo.mapNumber != null) {
         url += "/" + worldInfo.worldNumber + "-" + worldInfo.mapNumber
