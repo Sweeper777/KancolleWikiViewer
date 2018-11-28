@@ -72,6 +72,27 @@ function quest(questID) {
 function world(worldInfo) {
 }
 
+function enWikiWorld(worldInfo) {
+    var url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber
+    if (worldInfo.mapNumber != null) {
+        url += "#" + worldInfo.worldNumber + "-" + worldInfo.mapNumber
+        if (worldInfo.options[0] == "ep") {
+            if (worldInfo.mapNumber == 1) {
+                url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Nodes_and_Enemy_Encounters"
+            } else {
+                url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Nodes_and_Enemy_Encounters_" + worldInfo.mapNumber
+            }
+        } else if (worldInfo.options[0] == "dl") {
+            if (worldInfo.mapNumber == 1) {
+                url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Drops"
+            } else {
+                url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Drops_" + worldInfo.mapNumber
+            }
+        }
+    }
+    return url
+}
+
 function wikiaWorld(worldInfo) {
     var url = "https://kancolle.wikia.com/wiki/World_" + worldInfo.worldNumber
     if (worldInfo.mapNumber != null) {
