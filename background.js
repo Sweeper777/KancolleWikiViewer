@@ -70,6 +70,16 @@ function quest(questID) {
 }
 
 function world(worldInfo) {
+    getPreferredWiki(function(result) {
+        var url = ""
+        if (result.wiki == "2") {
+            url = enWikiWorld(worldInfo)
+        } else {
+            url = wikiaWorld(worldInfo)
+        }
+
+        chrome.tabs.update({url: url})
+    })
 }
 
 function enWikiWorld(worldInfo) {
