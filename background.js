@@ -116,7 +116,7 @@ function wikiaWorld(worldInfo) {
             url += "/Drop_list"
         }
     }
-    chrome.tabs.update({url: url})
+    return url
 }
 
 function toTitleCase(str) {
