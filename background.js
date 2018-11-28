@@ -57,8 +57,16 @@ function quest(questID) {
     } else {
         questID = questID.toUpperCase()
     }
-    var url = "https://kancolle.wikia.com/wiki/Quests#" + questID
-    chrome.tabs.update({url: url})
+    getPreferredWiki(function(result) {
+        var url = ""
+        if (result.wiki == "2") {
+            url = "http://en.kancollewiki.net/wiki/Quests#" + questID
+        } else {
+            url = "https://kancolle.wikia.com/wiki/Quests#" + questID
+        }
+
+        chrome.tabs.update({url: url})
+    })
 }
 
 function world(worldInfo) {
