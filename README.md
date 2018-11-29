@@ -55,3 +55,9 @@ After typing `e:`, autocomplete suggestions will pop up, so you don't have to ty
 ## Linking to different wikis (WIP)
 
 If you prefer the EN kancollewiki to the Wikia, you can change which wiki to link to in the options, which you can open by clicking on the extension's icon, then click "options"
+
+### Limitations
+
+Because different wikis are different, some features might not work on all wikis.
+
+- Specifying a specific node when viewing enemy patterns is not available on EN Wiki
