@@ -46,7 +46,7 @@ function showSuggestions(text, suggest) {
     }
     else if (text.match(/^e:/)) {
         let partialName = text.substr(2)
-        var suggestions = equipmentNames.filter(x => x.match(partialName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'))).slice(0, 10)
+        var suggestions = equipmentNames.filter(x => x.match(new RegExp(partialName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), "i"))).slice(0, 10)
         suggest(suggestions.map(x => ({content: "e:" + x, description: x})))
     }
 }
