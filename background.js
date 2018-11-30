@@ -155,8 +155,17 @@ function ship(shipInfo) {
 }
 
 function equipment(equipmentName) {
-    var url = "https://kancolle.wikia.com/wiki/" + addUnderscores(toTitleCase(equipmentName))
-    chrome.tabs.update({url: url})
+    // https://www.google.com/search?q=hello&btnI
+    getPreferredWiki(function(result) {
+        var wiki = ""
+        if (result.wiki == "2") {
+            wiki = "en.kancollewiki.net"
+        } else {
+            wiki = "kancolle.wikia.com"
+        }
+        var url = "https://duckduckgo.com/?q=!ducky+" + wiki + "+" + addPluses(toTitleCase(equipmentName))
+        chrome.tabs.update({url: url})
+    })
 }
 
 var shipNames = []
