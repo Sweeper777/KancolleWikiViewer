@@ -137,13 +137,21 @@ function addPluses(string) {
 }
 
 function ship(shipInfo) {
-    var url = "https://kancolle.wikia.com/wiki/" + addUnderscores(toTitleCase(shipInfo.shipName))
-    if (shipInfo.options[0] == "q") {
-        url += "#Quotes"
-    } else if (shipInfo.options[0] == "g") {
-        url += "/Gallery"
-    }
-    chrome.tabs.update({url: url})
+    getPreferredWiki(function(result) {
+        var urlHead = ""
+        if (result.wiki == "2") {
+            urlHead = "http://en.kancollewiki.net/wiki/"
+        } else {
+            urlHead = "https://kancolle.wikia.com/wiki/"
+        }
+        var url = urlHead + addUnderscores(toTitleCase(shipInfo.shipName))
+        if (shipInfo.options[0] == "q") {
+            url += "#Quotes"
+        } else if (shipInfo.options[0] == "g") {
+            url += "/Gallery"
+        }
+        chrome.tabs.update({url: url})
+    })
 }
 
 function equipment(equipmentName) {
