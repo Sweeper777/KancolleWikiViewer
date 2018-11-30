@@ -129,7 +129,11 @@ function toTitleCase(str) {
 }
 
 function addUnderscores(string) {
-    return string.replace(" ", "_")
+    return string.replace(/ +/, "_")
+}
+
+function addPluses(string) {
+    return string.replace(/ +/, "+")
 }
 
 function ship(shipInfo) {
