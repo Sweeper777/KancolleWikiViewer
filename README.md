@@ -57,6 +57,10 @@ Examples:
 - `kcw e:Searchlight` takes you to https://kancolle.wikia.com/wiki/Searchlight
 - `kcw e:12.7cm Twin Gun Mount Model A` takes you to http://kancolle.wikia.com/wiki/12.7cm_Twin_Gun_Mount_Model_A
 
+### Limitations
+
+When linking to equipment pages, I used duckduckgo.com's "I'm feeling lucky" feature to do a fuzzy search for the equipment names, since different wikis use slightly different equipment names. Therefore, I cannot guarentee that you will always be taken to the correct page. However, through my everyday usage, I have never been sent to the wrong page.
+
 ## Linking to different wikis (WIP)
 
 If you prefer the EN kancollewiki to the Wikia, you can change which wiki to link to in the options, which you can open by clicking on the extension's icon, then click "options"
