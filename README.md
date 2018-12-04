@@ -61,6 +61,17 @@ Examples:
 
 When linking to equipment pages, I used duckduckgo.com's "I'm feeling lucky" feature to do a fuzzy search for the equipment names, since different wikis use slightly different equipment names. Therefore, I cannot guarentee that you will always be taken to the correct page. However, through my everyday usage, I have never been sent to the wrong page.
 
+## Viewing ship lists
+
+    kcw list <ship type>
+
+Goes the "list of &lt;ship type&gt; by upgraded maximum stats" page. Ship type is case insensitive.
+
+Examples:
+
+- `kcw list dd` takes you to http://kancolle.wikia.com/wiki/List_of_destroyers_by_upgraded_maximum_stats
+- `kcw list cl` takes you to http://kancolle.wikia.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats
+
 ## Linking to different wikis (WIP)
 
 If you prefer the EN kancollewiki to the Wikia, you can change which wiki to link to in the options, which you can open by clicking on the extension's icon, then click "options"
