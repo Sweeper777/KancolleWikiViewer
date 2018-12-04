@@ -20,6 +20,7 @@ function input(text) {
     var worldRegex = /^\s*(\d+)(?:-(\d+)\s*(.*))?$/
     var shipRegex = /^\s*s:(.+?)(?:\s+(-.*))?$/i
     var equipmentRegex = /^\s*e:(.+?)\s*$/i
+    var listRegex = /^list\s+(.+)/i
     if (match = questRegex.exec(text)) {
         quest(match[1])
     } else if (match = worldRegex.exec(text)) {
@@ -35,6 +36,8 @@ function input(text) {
         })
     } else if (match = equipmentRegex.exec(text)) {
         equipment(match[1])
+    } else if (match = listRegex.exec(text)) {
+        list(match[1])
     }
 }
 
@@ -155,7 +158,6 @@ function ship(shipInfo) {
 }
 
 function equipment(equipmentName) {
-    // https://www.google.com/search?q=hello&btnI
     getPreferredWiki(function(result) {
         var wiki = ""
         if (result.wiki == "2") {
@@ -163,7 +165,11 @@ function equipment(equipmentName) {
         } else {
             wiki = "kancolle.wikia.com"
         }
-        var url = "https://duckduckgo.com/?q=!ducky+" + wiki + "+" + addPluses(toTitleCase(equipmentName))
+        var url =  "https://duckduckgo.com/?q=!ducky+" + wiki + "+" + addPluses(toTitleCase(equipmentName))
+        chrome.tabs.update({url: url})
+    })
+}
+
 function enWikiList(shipType) {
     switch (shipType) {
         case "de":
