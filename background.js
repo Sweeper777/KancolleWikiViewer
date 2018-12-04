@@ -174,6 +174,17 @@ function enWikiList(shipType) {
             return "http://en.kancollewiki.net/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
     }
 }
+
+function wikiaList(shipType) {
+    switch (shipType) {
+        case "de":
+            return "http://kancolle.wikia.com/wiki/List_of_coastal_defense_ships_by_upgraded_maximum_stats"
+        case "dd":
+            return "http://kancolle.wikia.com/wiki/List_of_destroyers_by_upgraded_maximum_stats"
+        case "cl":
+            return "http://kancolle.wikia.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
+    }
+}
         chrome.tabs.update({url: url})
     })
 }
