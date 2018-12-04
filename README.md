@@ -52,6 +52,11 @@ The equipment name is generally case-insensitive, but it is not guarenteed to wo
 
 After typing `e:`, autocomplete suggestions will pop up, so you don't have to type the full name.
 
+Examples:
+
+- `kcw e:Searchlight` takes you to https://kancolle.wikia.com/wiki/Searchlight
+- `kcw e:12.7cm Twin Gun Mount Model A` takes you to http://kancolle.wikia.com/wiki/12.7cm_Twin_Gun_Mount_Model_A
+
 ## Linking to different wikis (WIP)
 
 If you prefer the EN kancollewiki to the Wikia, you can change which wiki to link to in the options, which you can open by clicking on the extension's icon, then click "options"
