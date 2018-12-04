@@ -164,6 +164,16 @@ function equipment(equipmentName) {
             wiki = "kancolle.wikia.com"
         }
         var url = "https://duckduckgo.com/?q=!ducky+" + wiki + "+" + addPluses(toTitleCase(equipmentName))
+function enWikiList(shipType) {
+    switch (shipType) {
+        case "de":
+            return "http://en.kancollewiki.net/wiki/List_of_destroyer_escorts_by_upgraded_maximum_stats"
+        case "dd":
+            return "http://en.kancollewiki.net/wiki/List_of_destroyers_by_upgraded_maximum_stats"
+        case "cl":
+            return "http://en.kancollewiki.net/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
+    }
+}
         chrome.tabs.update({url: url})
     })
 }
