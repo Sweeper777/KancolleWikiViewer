@@ -185,6 +185,15 @@ function wikiaList(shipType) {
             return "http://kancolle.wikia.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
     }
 }
+
+function list(shipType) {
+    getPreferredWiki(function(result) {
+        var url = ""
+        if (result.wiki == "2") {
+            url = enWikiList(shipType.toLowerCase())
+        } else {
+            url = wikiaList(shipType.toLowerCase())
+        }
         chrome.tabs.update({url: url})
     })
 }
