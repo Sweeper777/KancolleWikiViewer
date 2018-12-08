@@ -171,13 +171,8 @@ function equipment(equipmentName) {
 }
 
 function enWikiList(shipType) {
-    switch (shipType) {
-        case "de":
-            return "http://en.kancollewiki.net/wiki/List_of_destroyer_escorts_by_upgraded_maximum_stats"
-        case "dd":
-            return "http://en.kancollewiki.net/wiki/List_of_destroyers_by_upgraded_maximum_stats"
-        case "cl":
-            return "http://en.kancollewiki.net/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
+    if (["de", "dd", "cl", "ca", "bb", "cvl", "cv", "av", "ss", "clt"].includes(shipType)) {
+        return "http://en.kancollewiki.net/wiki/Elite" + shipType
     }
 }
 
