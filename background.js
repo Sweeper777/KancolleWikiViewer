@@ -184,6 +184,20 @@ function wikiaList(shipType) {
             return "http://kancolle.wikia.com/wiki/List_of_destroyers_by_upgraded_maximum_stats"
         case "cl":
             return "http://kancolle.wikia.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
+        case "ca":
+            return "http://kancolle.wikia.com/wiki/List_of_heavy_cruisers_by_upgraded_maximum_stats"
+        case "bb":
+            return "http://kancolle.wikia.com/wiki/List_of_battleships_by_upgraded_maximum_stats"
+        case "cvl":
+            return "http://kancolle.wikia.com/wiki/List_of_light_aircraft_carriers_by_upgraded_maximum_stats"
+        case "cv":
+            return "http://kancolle.wikia.com/wiki/List_of_fleet_standard_aircraft_carriers_by_upgraded_maximum_stats"
+        case "ss":
+            return "http://kancolle.wikia.com/wiki/List_of_submarines_by_upgraded_maximum_stats"
+        case "av":
+            return "http://kancolle.wikia.com/wiki/List_of_seaplane_tenders_by_upgraded_maximum_stats"
+        case "clt":
+            return "http://kancolle.wikia.com/wiki/List_of_Torpedo_Cruisers_by_upgraded_maximum_stats"
     }
 }
 
