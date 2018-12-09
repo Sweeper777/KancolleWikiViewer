@@ -67,6 +67,12 @@ When linking to equipment pages, I used duckduckgo.com's "I'm feeling lucky" fea
 
 Goes the "list of &lt;ship type&gt; by upgraded maximum stats" page. Ship type is case insensitive.
 
+The following ship types are supported:
+
+> DD, DE, CL, CLT, CA, BB, CV, CVL, SS, AV
+
+CAV and BBV are not supported as their info can be found on the CA and BB pages respectively.
+
 Examples:
 
 - `kcw list dd` takes you to http://kancolle.wikia.com/wiki/List_of_destroyers_by_upgraded_maximum_stats
