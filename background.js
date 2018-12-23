@@ -85,6 +85,13 @@ function world(worldInfo) {
     })
 }
 
+function enWikiEventWorld(worldInfo) {
+    if (worldInfo.mapNumber == null) {
+        return "http://en.kancollewiki.net/wiki/Second_Winter_2018_Event"
+    }
+    return "http://en.kancollewiki.net/wiki/Second_Winter_2018_Event#E-" + worldInfo.mapNumber
+}
+
 function enWikiWorld(worldInfo) {
     var url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber
     if (worldInfo.mapNumber != null) {
