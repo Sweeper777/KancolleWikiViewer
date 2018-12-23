@@ -75,10 +75,14 @@ function quest(questID) {
 function world(worldInfo) {
     getPreferredWiki(function(result) {
         var url = ""
-        if (result.wiki == "2") {
+        if (result.wiki == "2" && worldInfo.worldNumber.toLowerCase() != "e") {
             url = enWikiWorld(worldInfo)
-        } else {
+        } else if (result.wiki == "2") {
+            url = enWikiEventWorld(worldInfo)
+        } else if (worldInfo.worldNumber.toLowerCase() != "e") {
             url = wikiaWorld(worldInfo)
+        } else {
+            url = wikiaEventWorld(worldInfo)
         }
 
         chrome.tabs.update({url: url})
