@@ -91,9 +91,9 @@ function world(worldInfo) {
 
 function enWikiEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
-        return "http://en.kancollewiki.net/wiki/Second_Winter_2018_Event"
+        return "http://en.kancollewiki.net/wiki/Winter_2019_Event"
     }
-    return "http://en.kancollewiki.net/wiki/Second_Winter_2018_Event#E-" + worldInfo.mapNumber
+    return "http://en.kancollewiki.net/wiki/Winter_2019_Event#E-" + worldInfo.mapNumber
 }
 
 function wikiaEventWorld(worldInfo) {
