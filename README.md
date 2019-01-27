@@ -20,6 +20,8 @@ Goes to the specifed world or map, or goes to the enemy patterns page of a map i
 
 Event worlds are also supported e.g. E-1. I will try to make it as up to date as possible to show the current or upcoming event.
 
+Note that event worlds are not supported if there currently no event running.
+
 Examples:
 
 - `kcw 1` takes you to https://kancolle.wikia.com/wiki/World_1
