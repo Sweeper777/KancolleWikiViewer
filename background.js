@@ -17,7 +17,7 @@ function extractOptions(optionString) {
 
 function input(text) {
     var questRegex = /^\s*([a-z]{1,2}\d+)\s*$/i
-    var worldRegex = /^\s*(\d+|e)(?:-(\d+)\s*(.*))?$/i
+    var worldRegex = /^\s*(\d+)(?:-(\d+)\s*(.*))?$/i
     var shipRegex = /^\s*s:(.+?)(?:\s+(-.*))?$/i
     var equipmentRegex = /^\s*e:(.+?)\s*$/i
     var listRegex = /^list\s+(.+)/i
