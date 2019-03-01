@@ -65,7 +65,7 @@ function quest(questID) {
         if (result.wiki == "2") {
             url = "http://en.kancollewiki.net/wiki/Quests#" + questID
         } else {
-            url = "https://kancolle.wikia.com/wiki/Quests#" + questID
+            url = "https://kancolle.fandom.com/wiki/Quests#" + questID
         }
 
         chrome.tabs.update({url: url})
@@ -98,9 +98,9 @@ function enWikiEventWorld(worldInfo) {
 
 function wikiaEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
-        return "http://kancolle.wikia.com/wiki/Winter_2019_Event/Info"
+        return "http://kancolle.fandom.com/wiki/Winter_2019_Event/Info"
     }
-    return "http://kancolle.wikia.com/wiki/Winter_2019_Event#/E-" + worldInfo.mapNumber
+    return "http://kancolle.fandom.com/wiki/Winter_2019_Event#/E-" + worldInfo.mapNumber
 }
 
 function enWikiWorld(worldInfo) {
@@ -125,7 +125,7 @@ function enWikiWorld(worldInfo) {
 }
 
 function wikiaWorld(worldInfo) {
-    var url = "https://kancolle.wikia.com/wiki/World_" + worldInfo.worldNumber
+    var url = "https://kancolle.fandom.com/wiki/World_" + worldInfo.worldNumber
     if (worldInfo.mapNumber != null) {
         url += "/" + worldInfo.worldNumber + "-" + worldInfo.mapNumber
         if (worldInfo.options[0] == "ep") {
@@ -163,7 +163,7 @@ function ship(shipInfo) {
         if (result.wiki == "2") {
             urlHead = "http://en.kancollewiki.net/wiki/"
         } else {
-            urlHead = "https://kancolle.wikia.com/wiki/"
+            urlHead = "https://kancolle.fandom.com/wiki/"
         }
         var url = urlHead + addUnderscores(toTitleCase(shipInfo.shipName))
         if (shipInfo.options[0] == "q") {
@@ -181,7 +181,7 @@ function equipment(equipmentName) {
         if (result.wiki == "2") {
             wiki = "en.kancollewiki.net"
         } else {
-            wiki = "kancolle.wikia.com"
+            wiki = "kancolle.fandom.com"
         }
         var url =  "https://duckduckgo.com/?q=!ducky+" + wiki + "+" + addPluses(toTitleCase(equipmentName))
         chrome.tabs.update({url: url})
@@ -197,25 +197,25 @@ function enWikiList(shipType) {
 function wikiaList(shipType) {
     switch (shipType) {
         case "de":
-            return "http://kancolle.wikia.com/wiki/List_of_coastal_defense_ships_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_coastal_defense_ships_by_upgraded_maximum_stats"
         case "dd":
-            return "http://kancolle.wikia.com/wiki/List_of_destroyers_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_destroyers_by_upgraded_maximum_stats"
         case "cl":
-            return "http://kancolle.wikia.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
         case "ca":
-            return "http://kancolle.wikia.com/wiki/List_of_heavy_cruisers_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_heavy_cruisers_by_upgraded_maximum_stats"
         case "bb":
-            return "http://kancolle.wikia.com/wiki/List_of_battleships_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_battleships_by_upgraded_maximum_stats"
         case "cvl":
-            return "http://kancolle.wikia.com/wiki/List_of_light_aircraft_carriers_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_light_aircraft_carriers_by_upgraded_maximum_stats"
         case "cv":
-            return "http://kancolle.wikia.com/wiki/List_of_fleet_standard_aircraft_carriers_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_fleet_standard_aircraft_carriers_by_upgraded_maximum_stats"
         case "ss":
-            return "http://kancolle.wikia.com/wiki/List_of_submarines_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_submarines_by_upgraded_maximum_stats"
         case "av":
-            return "http://kancolle.wikia.com/wiki/List_of_seaplane_tenders_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_seaplane_tenders_by_upgraded_maximum_stats"
         case "clt":
-            return "http://kancolle.wikia.com/wiki/List_of_Torpedo_Cruisers_by_upgraded_maximum_stats"
+            return "http://kancolle.fandom.com/wiki/List_of_Torpedo_Cruisers_by_upgraded_maximum_stats"
     }
 }
 
