@@ -17,7 +17,7 @@ function extractOptions(optionString) {
 
 function input(text) {
     var questRegex = /^\s*([a-z]{1,2}\d+)\s*$/i
-    var worldRegex = /^\s*(\d+|e)(?:-(\d+)\s*(.*))?$/i
+    var worldRegex = /^\s*(\d+)(?:-(\d+)\s*(.*))?$/i
     var shipRegex = /^\s*s:(.+?)(?:\s+(-.*))?$/i
     var equipmentRegex = /^\s*e:(.+?)\s*$/i
     var listRegex = /^list\s+(.+)/i
@@ -91,16 +91,16 @@ function world(worldInfo) {
 
 function enWikiEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
-        return "http://en.kancollewiki.net/wiki/Spring_2019_Event"
+        return "http://en.kancollewiki.net/wiki/Winter_2019_Event"
     }
-    return "http://en.kancollewiki.net/wiki/Spring_2019_Event#E-" + worldInfo.mapNumber
+    return "http://en.kancollewiki.net/wiki/Winter_2019_Event#E-" + worldInfo.mapNumber
 }
 
 function wikiaEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
-        return "https://kancolle.fandom.com/wiki/Spring_2019_Event/Info"
+        return "http://kancolle.fandom.com/wiki/Winter_2019_Event/Info"
     }
-    return "https://kancolle.fandom.com/wiki/Spring_2019_Event#/E-" + worldInfo.mapNumber
+    return "http://kancolle.fandom.com/wiki/Winter_2019_Event#/E-" + worldInfo.mapNumber
 }
 
 function enWikiWorld(worldInfo) {
