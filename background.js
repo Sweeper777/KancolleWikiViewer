@@ -1,3 +1,7 @@
+var eventOngoing = true
+var eventWikiaLink = "https://kancolle.fandom.com/wiki/Summer_2019_Event"
+var eventEnWikiLink = "http://en.kancollewiki.net/wiki/Summer_2019_Event"
+
 function getPreferredWiki(completion) {
     chrome.storage.sync.get({
         wiki: "1"
@@ -17,13 +21,14 @@ function extractOptions(optionString) {
 
 function input(text) {
     var questRegex = /^\s*([a-z]{1,2}\d+)\s*$/i
-    var worldRegex = /^\s*(\d+|e)(?:-(\d+)\s*(.*))?$/i
+    var worldRegex = /^\s*(\d+)(?:-(\d+)\s*(.*))?$/i
+    var worldRegexWithEvent = /^\s*(\d+|e)(?:-(\d+)\s*(.*))?$/i
     var shipRegex = /^\s*s:(.+?)(?:\s+(-.*))?$/i
     var equipmentRegex = /^\s*e:(.+?)\s*$/i
     var listRegex = /^list\s+(.+)/i
     if (match = questRegex.exec(text)) {
         quest(match[1])
-    } else if (match = worldRegex.exec(text)) {
+    } else if (match = worldRegex.exec(text) || (eventOngoing && (match = worldRegexWithEvent.exec(text)))) {
         world({
             worldNumber: match[1],
             mapNumber: match[2],
@@ -91,16 +96,16 @@ function world(worldInfo) {
 
 function enWikiEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
-        return "http://en.kancollewiki.net/wiki/Summer_2019_Event"
+        return eventEnWikiLink
     }
-    return "http://en.kancollewiki.net/wiki/Summer_2019_Event#E-" + worldInfo.mapNumber
+    return eventEnWikiLink + "#E-" + worldInfo.mapNumber
 }
 
 function wikiaEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
-        return "https://kancolle.fandom.com/wiki/Summer_2019_Event/Info"
+        return eventWikiaLink + "/Info"
     }
-    return "https://kancolle.fandom.com/wiki/Summer_2019_Event#/E-" + worldInfo.mapNumber
+    return eventWikiaLink + "#/E-" + worldInfo.mapNumber
 }
 
 function enWikiWorld(worldInfo) {
