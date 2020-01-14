@@ -1,4 +1,4 @@
-var eventOngoing = true
+var eventOngoing = false
 var eventWikiaLink = "https://kancolle.fandom.com/wiki/Fall_2019_Event"
 var eventEnWikiLink = "https://en.kancollewiki.net/Fall_2019_Event"
 
