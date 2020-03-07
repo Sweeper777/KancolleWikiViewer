@@ -1,6 +1,6 @@
-var eventOngoing = false
-var eventWikiaLink = "https://kancolle.fandom.com/wiki/Fall_2019_Event"
-var eventEnWikiLink = "https://en.kancollewiki.net/Fall_2019_Event"
+var eventOngoing = true
+var eventWikiaLink = "https://kancolle.fandom.com/wiki/Hinamatsuri_2020_Mini-Event"
+var eventEnWikiLink = "https://en.kancollewiki.net/Hinamatsuri_2020_Mini-Event"
 
 function getPreferredWiki(completion) {
     chrome.storage.sync.get({
