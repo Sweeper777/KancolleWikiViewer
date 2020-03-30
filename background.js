@@ -1,4 +1,4 @@
-var eventOngoing = true
+var eventOngoing = false;
 var eventWikiaLink = "https://kancolle.fandom.com/wiki/Hinamatsuri_2020_Mini-Event"
 var eventEnWikiLink = "https://en.kancollewiki.net/Hinamatsuri_2020_Mini-Event"
 
