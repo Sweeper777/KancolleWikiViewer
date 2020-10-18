@@ -1,6 +1,6 @@
-var eventOngoing = false
-var eventWikiaLink = "https://kancolle.fandom.com/wiki/Summer_2019_Event"
-var eventEnWikiLink = "http://en.kancollewiki.net/wiki/Summer_2019_Event"
+var eventOngoing = false;
+var eventWikiaLink = "https://kancolle.fandom.com/wiki/Rainy-Summer_2020_Event"
+var eventEnWikiLink = "https://en.kancollewiki.net/Summer_2020_Event"
 
 function getPreferredWiki(completion) {
     completion("2");
@@ -66,9 +66,9 @@ function quest(questID) {
     getPreferredWiki(function(result) {
         var url = ""
         if (result.wiki == "2") {
-            url = "http://en.kancollewiki.net/wiki/Quests#" + questID
+            url = "http://en.kancollewiki.net/Quests#" + questID
         } else {
-            url = "https://kancolle.fandom.com/wiki/Quests#" + questID
+            url = "https://kancolle.fandom.com/Quests#" + questID
         }
 
         chrome.tabs.update({url: url})
@@ -100,20 +100,20 @@ function enWikiEventWorld(worldInfo) {
 }
 
 function enWikiWorld(worldInfo) {
-    var url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber
+    var url = "http://en.kancollewiki.net/World_" + worldInfo.worldNumber
     if (worldInfo.mapNumber != null) {
         url += "#" + worldInfo.worldNumber + "-" + worldInfo.mapNumber
         if (worldInfo.options[0] == "ep") {
             if (worldInfo.mapNumber == 1) {
-                url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Nodes_and_Enemy_Encounters"
+                url = "http://en.kancollewiki.net/World_" + worldInfo.worldNumber + "#Nodes_and_Enemy_Encounters"
             } else {
-                url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Nodes_and_Enemy_Encounters_" + worldInfo.mapNumber
+                url = "http://en.kancollewiki.net/World_" + worldInfo.worldNumber + "#Nodes_and_Enemy_Encounters_" + worldInfo.mapNumber
             }
         } else if (worldInfo.options[0] == "dl") {
             if (worldInfo.mapNumber == 1) {
-                url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Drops"
+                url = "http://en.kancollewiki.net/World_" + worldInfo.worldNumber + "#Drops"
             } else {
-                url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Drops_" + worldInfo.mapNumber
+                url = "http://en.kancollewiki.net/World_" + worldInfo.worldNumber + "#Drops_" + worldInfo.mapNumber
             }
         }
     }
@@ -141,7 +141,7 @@ function ship(shipInfo) {
     getPreferredWiki(function(result) {
         var urlHead = ""
         if (result.wiki == "2") {
-            urlHead = "http://en.kancollewiki.net/wiki/"
+            urlHead = "http://en.kancollewiki.net/"
         } else {
             urlHead = "https://kancolle.fandom.com/wiki/"
         }
@@ -170,7 +170,7 @@ function equipment(equipmentName) {
 
 function enWikiList(shipType) {
     if (["de", "dd", "cl", "ca", "bb", "cvl", "cv", "av", "ss", "clt"].includes(shipType)) {
-        return "http://en.kancollewiki.net/wiki/Elite" + shipType
+        return "http://en.kancollewiki.net/Elite" + shipType
     }
 }
 

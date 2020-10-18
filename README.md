@@ -82,7 +82,7 @@ Examples:
 - `kcw list dd` takes you to http://kancolle.fandom.com/wiki/List_of_destroyers_by_upgraded_maximum_stats
 - `kcw list cl` takes you to http://kancolle.fandom.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats
 
-## Linking to different wikis (WIP)
+## Linking to different wikis
 
 If you prefer the EN kancollewiki to the Wikia, you can change which wiki to link to in the options, which you can open by clicking on the extension's icon, then click "options"
 
