@@ -67,8 +67,6 @@ function quest(questID) {
         var url = ""
         if (result.wiki == "2") {
             url = "http://en.kancollewiki.net/Quests#" + questID
-        } else {
-            url = "https://kancolle.fandom.com/Quests#" + questID
         }
 
         chrome.tabs.update({url: url})
@@ -82,10 +80,6 @@ function world(worldInfo) {
             url = enWikiWorld(worldInfo)
         } else if (result.wiki == "2") {
             url = enWikiEventWorld(worldInfo)
-        } else if (worldInfo.worldNumber.toLowerCase() != "e") {
-            url = wikiaWorld(worldInfo)
-        } else {
-            url = wikiaEventWorld(worldInfo)
         }
 
         chrome.tabs.update({url: url})
@@ -142,8 +136,6 @@ function ship(shipInfo) {
         var urlHead = ""
         if (result.wiki == "2") {
             urlHead = "http://en.kancollewiki.net/"
-        } else {
-            urlHead = "https://kancolle.fandom.com/wiki/"
         }
         var url = urlHead + addUnderscores(toTitleCase(shipInfo.shipName))
         if (shipInfo.options[0] == "q") {
@@ -160,8 +152,6 @@ function equipment(equipmentName) {
         var wiki = ""
         if (result.wiki == "2") {
             wiki = "en.kancollewiki.net"
-        } else {
-            wiki = "kancolle.fandom.com"
         }
         var url =  "https://duckduckgo.com/?q=!ducky+" + wiki + "+" + addPluses(toTitleCase(equipmentName))
         chrome.tabs.update({url: url})
@@ -179,8 +169,6 @@ function list(shipType) {
         var url = ""
         if (result.wiki == "2") {
             url = enWikiList(shipType.toLowerCase())
-        } else {
-            url = wikiaList(shipType.toLowerCase())
         }
         chrome.tabs.update({url: url})
     })
