@@ -3,9 +3,7 @@ var eventWikiaLink = "https://kancolle.fandom.com/wiki/Summer_2019_Event"
 var eventEnWikiLink = "http://en.kancollewiki.net/wiki/Summer_2019_Event"
 
 function getPreferredWiki(completion) {
-    chrome.storage.sync.get({
-        wiki: "1"
-      }, completion)
+    completion("2");
 }
 
 function extractOptions(optionString) {
