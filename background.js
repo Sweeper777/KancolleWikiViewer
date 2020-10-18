@@ -99,13 +99,6 @@ function enWikiEventWorld(worldInfo) {
     return eventEnWikiLink + "#E-" + worldInfo.mapNumber
 }
 
-function wikiaEventWorld(worldInfo) {
-    if (worldInfo.mapNumber == null) {
-        return eventWikiaLink + "/Info"
-    }
-    return eventWikiaLink + "#/E-" + worldInfo.mapNumber
-}
-
 function enWikiWorld(worldInfo) {
     var url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber
     if (worldInfo.mapNumber != null) {
@@ -122,22 +115,6 @@ function enWikiWorld(worldInfo) {
             } else {
                 url = "http://en.kancollewiki.net/wiki/World_" + worldInfo.worldNumber + "#Drops_" + worldInfo.mapNumber
             }
-        }
-    }
-    return url
-}
-
-function wikiaWorld(worldInfo) {
-    var url = "https://kancolle.fandom.com/wiki/World_" + worldInfo.worldNumber
-    if (worldInfo.mapNumber != null) {
-        url += "/" + worldInfo.worldNumber + "-" + worldInfo.mapNumber
-        if (worldInfo.options[0] == "ep") {
-            url += "/Enemy_patterns"
-            if (worldInfo.options[1] != undefined) {
-                url += "#" + worldInfo.worldNumber + "-" + worldInfo.mapNumber + "_" + worldInfo.options[1].toUpperCase()
-            }
-        } else if (worldInfo.options[0] == "dl") {
-            url += "/Drop_list"
         }
     }
     return url
@@ -194,31 +171,6 @@ function equipment(equipmentName) {
 function enWikiList(shipType) {
     if (["de", "dd", "cl", "ca", "bb", "cvl", "cv", "av", "ss", "clt"].includes(shipType)) {
         return "http://en.kancollewiki.net/wiki/Elite" + shipType
-    }
-}
-
-function wikiaList(shipType) {
-    switch (shipType) {
-        case "de":
-            return "http://kancolle.fandom.com/wiki/List_of_coastal_defense_ships_by_upgraded_maximum_stats"
-        case "dd":
-            return "http://kancolle.fandom.com/wiki/List_of_destroyers_by_upgraded_maximum_stats"
-        case "cl":
-            return "http://kancolle.fandom.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats"
-        case "ca":
-            return "http://kancolle.fandom.com/wiki/List_of_heavy_cruisers_by_upgraded_maximum_stats"
-        case "bb":
-            return "http://kancolle.fandom.com/wiki/List_of_battleships_by_upgraded_maximum_stats"
-        case "cvl":
-            return "http://kancolle.fandom.com/wiki/List_of_light_aircraft_carriers_by_upgraded_maximum_stats"
-        case "cv":
-            return "http://kancolle.fandom.com/wiki/List_of_fleet_standard_aircraft_carriers_by_upgraded_maximum_stats"
-        case "ss":
-            return "http://kancolle.fandom.com/wiki/List_of_submarines_by_upgraded_maximum_stats"
-        case "av":
-            return "http://kancolle.fandom.com/wiki/List_of_seaplane_tenders_by_upgraded_maximum_stats"
-        case "clt":
-            return "http://kancolle.fandom.com/wiki/List_of_Torpedo_Cruisers_by_upgraded_maximum_stats"
     }
 }
 
