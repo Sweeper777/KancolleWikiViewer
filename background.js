@@ -3,7 +3,7 @@ var eventWikiaLink = "https://kancolle.fandom.com/wiki/Rainy-Summer_2020_Event"
 var eventEnWikiLink = "https://en.kancollewiki.net/Summer_2020_Event"
 
 function getPreferredWiki(completion) {
-    completion("2");
+    completion({wiki: "2"});
 }
 
 function extractOptions(optionString) {
