@@ -1,6 +1,6 @@
   {
     "name": "Kancolle Wiki Viewer",
-    "version": "0.2",
+    "version": "0.3",
     "description": "Type short commands into the address bar and you'll go to various wiki pages",
     "background": {
         "scripts": ["background.js"],
