@@ -10,7 +10,7 @@ Every command begins with `kcw` followed by a space. `kcw` stands for **K**an**C
 
 Goes to the specified quest on the Quests page. `<quest ID>` is something like `A5` or `B20`, case insensitive
 
-Example: `kcw B20` takes you to https://kancolle.fandom.com/wiki/Quests#B20
+Example: `kcw B20` takes you to https://en.kancollewiki.net/Quests#B20
 
 ## Viewing worlds and maps
 
@@ -20,14 +20,13 @@ Goes to the specifed world or map, or goes to the enemy patterns page of a map i
 
 Event worlds are also supported e.g. E-1. I will try to make it as up to date as possible to show the current or upcoming event.
 
-Note that event worlds are not supported if there currently no event running.
+Note that event worlds are not supported if there are currently no event running.
 
 Examples:
 
-- `kcw 1` takes you to https://kancolle.fandom.com/wiki/World_1
-- `kcw 1-1` takes you to https://kancolle.fandom.com/wiki/World_1/1-1
-- `kcw 1-1 -ep` takes you to https://kancolle.fandom.com/wiki/World_1/1-1/Enemy_patterns
-- `kcw 1-1 -ep -a` takes you to https://kancolle.fandom.com/wiki/World_1/1-1/Enemy_patterns#1-1_A
+- `kcw 1` takes you to https://en.kancollewiki.net/World_1
+- `kcw 1-1` takes you to https://en.kancollewiki.net/World_1#1-1
+- `kcw 1-1 -ep` takes you to https://en.kancollewiki.net/World_1#Nodes_and_Enemy_Encounters
 - `kcw 1-1 -dl` takes you to https://kancolle.fandom.com/wiki/World_1/1-1/Drop_list
 
 ## Viewing ships
@@ -42,9 +41,9 @@ After typing `s:`, autocomplete suggestions will pop up, so you don't have to ty
 
 Examples:
 
-- `kcw s:Asashio` takes you to https://kancolle.fandom.com/wiki/Asashio
-- `kcw s:Asashio -q` takes you to https://kancolle.fandom.com/wiki/Asashio#Quotes
-- `kcw s:Asashio -g` takes you to https://kancolle.fandom.com/wiki/Asashio/Gallery
+- `kcw s:Asashio` takes you to https://en.kancollewiki.net/Asashio
+- `kcw s:Asashio -q` takes you to https://en.kancollewiki.net/Asashio#Quotes
+- `kcw s:Asashio -g` takes you to https://en.kancollewiki.net/Asashio/Gallery
 
 ## Viewing equipments
 
@@ -58,8 +57,8 @@ After typing `e:`, autocomplete suggestions will pop up, so you don't have to ty
 
 Examples:
 
-- `kcw e:Searchlight` takes you to https://kancolle.fandom.com/wiki/Searchlight
-- `kcw e:12.7cm Twin Gun Mount Model A` takes you to http://kancolle.fandom.com/wiki/12.7cm_Twin_Gun_Mount_Model_A
+- `kcw e:Searchlight` takes you to https://en.kancollewiki.net/Searchlight
+- `kcw e:12.7cm Twin Gun Mount` takes you to https://en.kancollewiki.net/12.7cm_Twin_Gun_Mount
 
 ### Limitations
 
@@ -79,5 +78,5 @@ CAV and BBV are not supported as their info can be found on the CA and BB pages 
 
 Examples:
 
-- `kcw list dd` takes you to http://kancolle.fandom.com/wiki/List_of_destroyers_by_upgraded_maximum_stats
-- `kcw list cl` takes you to http://kancolle.fandom.com/wiki/List_of_light_cruisers_by_upgraded_maximum_stats
+- `kcw list dd` takes you to https://en.kancollewiki.net/List_of_destroyers_by_upgraded_maximum_stats
+- `kcw list cl` takes you to https://en.kancollewiki.net/List_of_light_cruisers_by_upgraded_maximum_stats
