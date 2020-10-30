@@ -63,7 +63,7 @@ Examples:
 
 ### Limitations
 
-When linking to equipment pages, I used duckduckgo.com's "I'm feeling lucky" feature to do a fuzzy search for the equipment names, since different wikis use slightly different equipment names. Therefore, I cannot guarentee that you will always be taken to the correct page. However, through my everyday usage, I have never been sent to the wrong page.
+When linking to equipment pages, I used duckduckgo.com's "I'm feeling lucky" feature to do a fuzzy search for the equipment names, since different wikis use slightly different equipment names. Therefore, I cannot guarentee that you will always be taken to the correct page.
 
 ## Viewing ship lists
 
