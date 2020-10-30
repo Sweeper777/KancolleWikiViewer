@@ -14,7 +14,7 @@ Example: `kcw B20` takes you to https://kancolle.fandom.com/wiki/Quests#B20
 
 ## Viewing worlds and maps
 
-    kcw <world number>[-<map number> [-dl|-ep [-<node>]]]
+    kcw <world number>[-<map number> [-dl|-ep]]
 
 Goes to the specifed world or map, or goes to the enemy patterns page of a map if specified. You can specify the `-ep` option to view enemy patterns. On top of that, you can also specify a node (case-insenstive). Alternatively, specify the `-dl` option to view the drop list.
 
