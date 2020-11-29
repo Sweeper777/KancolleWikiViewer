@@ -1,6 +1,5 @@
-var eventOngoing = false;
-var eventWikiaLink = "https://kancolle.fandom.com/wiki/Rainy-Summer_2020_Event"
-var eventEnWikiLink = "https://en.kancollewiki.net/Summer_2020_Event"
+var eventOngoing = true
+var eventEnWikiLink = "https://en.kancollewiki.net/Fall_2020_Event"
 
 function getPreferredWiki(completion) {
     completion({wiki: "2"});
