@@ -1,8 +1,9 @@
 var eventOngoing = true
 var eventEnWikiLink = "https://en.kancollewiki.net/Fall_2020_Event"
+var mainOpsCount = 3
 
 function getPreferredWiki(completion) {
-    completion({wiki: "2"});
+    completion({wiki: "2"})
 }
 
 function extractOptions(optionString) {
