@@ -29,7 +29,7 @@ function input(text) {
     } else if (match = worldRegex.exec(text) || (eventOngoing && (match = worldRegexWithEvent.exec(text)))) {
         world({
             worldNumber: match[1],
-            mapNumber: match[2],
+            mapNumber: Number(match[2]),
             options: extractOptions(match[3])
         })
     } else if (match = shipRegex.exec(text)) {
