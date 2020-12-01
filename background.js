@@ -90,7 +90,11 @@ function enWikiEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
         return eventEnWikiLink
     }
-    return eventEnWikiLink + "#E-" + worldInfo.mapNumber
+    if (worldInfo.mapNumber <= mainOpsCount) {
+        return eventEnWikiLink + "/Main_Operations#E-" + worldInfo.mapNumber
+    } else {
+        return eventEnWikiLink + "/Extra_Operations#E-" + worldInfo.mapNumber
+    }
 }
 
 function enWikiWorld(worldInfo) {
