@@ -1,4 +1,4 @@
-var eventOngoing = true
+var eventOngoing = false
 var eventEnWikiLink = "https://en.kancollewiki.net/Fall_2020_Event"
 var mainOpsCount = 3
 
