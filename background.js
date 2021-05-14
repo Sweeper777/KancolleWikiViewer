@@ -1,6 +1,5 @@
-var eventOngoing = false
-var eventEnWikiLink = "https://en.kancollewiki.net/Fall_2020_Event"
-var mainOpsCount = 3
+var eventOngoing = true
+var eventEnWikiLink = "https://en.kancollewiki.net/Spring_2021_Event"
 
 function getPreferredWiki(completion) {
     completion({wiki: "2"})
@@ -90,11 +89,7 @@ function enWikiEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
         return eventEnWikiLink
     }
-    if (worldInfo.mapNumber <= mainOpsCount) {
-        return eventEnWikiLink + "/Main_Operations#E-" + worldInfo.mapNumber
-    } else {
-        return eventEnWikiLink + "/Extra_Operations#E-" + worldInfo.mapNumber
-    }
+    return eventEnWikiLink + "/Event_Maps#E-" + worldInfo.mapNumber
 }
 
 function enWikiWorld(worldInfo) {
