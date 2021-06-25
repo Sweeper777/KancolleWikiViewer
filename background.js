@@ -1,4 +1,4 @@
-var eventOngoing = true
+var eventOngoing = false
 var eventEnWikiLink = "https://en.kancollewiki.net/Spring_2021_Event"
 
 function getPreferredWiki(completion) {
