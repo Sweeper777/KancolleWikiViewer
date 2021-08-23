@@ -1,5 +1,6 @@
 var eventOngoing = true
 var eventEnWikiLink = "https://en.kancollewiki.net/Summer_2021_Event"
+var moCount = 2
 
 function getPreferredWiki(completion) {
     completion({wiki: "2"})
@@ -89,7 +90,11 @@ function enWikiEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
         return eventEnWikiLink
     }
-    return eventEnWikiLink + "/Main_Operation#E-" + worldInfo.mapNumber
+    if (worldInfo.mapNumber <= moCount) {
+        return eventEnWikiLink + "/Main_Operation#E-" + worldInfo.mapNumber
+    } else {
+        return eventEnWikiLink + "/Extra_Operation#E-" + worldInfo.mapNumber
+    }
 }
 
 function enWikiWorld(worldInfo) {
