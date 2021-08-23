@@ -1,5 +1,5 @@
-var eventOngoing = false
-var eventEnWikiLink = "https://en.kancollewiki.net/Spring_2021_Event"
+var eventOngoing = true
+var eventEnWikiLink = "https://en.kancollewiki.net/Summer_2021_Event"
 
 function getPreferredWiki(completion) {
     completion({wiki: "2"})
@@ -89,7 +89,7 @@ function enWikiEventWorld(worldInfo) {
     if (worldInfo.mapNumber == null) {
         return eventEnWikiLink
     }
-    return eventEnWikiLink + "/Event_Maps#E-" + worldInfo.mapNumber
+    return eventEnWikiLink + "/Main_Operation#E-" + worldInfo.mapNumber
 }
 
 function enWikiWorld(worldInfo) {
