@@ -1,4 +1,4 @@
-var eventOngoing = true
+var eventOngoing = false
 var eventEnWikiLink = "https://en.kancollewiki.net/Summer_2021_Event"
 var moCount = 2
 
