@@ -1,6 +1,6 @@
-var eventOngoing = false
-var eventEnWikiLink = "https://en.kancollewiki.net/Summer_2021_Event"
-var moCount = 2
+var eventOngoing = true
+var eventEnWikiLink = "https://en.kancollewiki.net/Fall_2021_Event"
+var moCount = 1
 
 function getPreferredWiki(completion) {
     completion({wiki: "2"})
